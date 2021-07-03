@@ -1,3 +1,8 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-size: 18px;
   display: flex;
@@ -55,7 +60,6 @@ main {
   max-width: 700px;
   margin-top: 1.5rem;
   z-index: 1;
-  position: absolute;
 }
 header {
   width: 100%;
@@ -273,14 +277,14 @@ header {
   width: 100vw;
   font-size: 11px;
   text-align: center;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: hsl(0, 6%, 6%);
   color: rgb(175, 175, 175);
-  padding: 0.5rem 0;
+  height: 2rem;
 }
 .attribution a {
   color: hsl(201, 85%, 45%);
@@ -332,7 +336,7 @@ header {
     font-size: 0.9rem;
   }
   .todo-items ul li {
-    padding: 1.5rem;
+    font-size: 18px;
   }
   .todo-footer {
     padding: 1.5rem;

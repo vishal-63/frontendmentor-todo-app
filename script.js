@@ -154,9 +154,10 @@ todoContainer.addEventListener("click", (e) => {
       removeLocalUncompletedTodos(todo);
 
     handleTaskCounter();
-    if (document.querySelectorAll(".todo-title").length === 0)
+    if (document.querySelectorAll(".todo-title").length === 0) {
       todoFooter.style.display = "none";
-    tabsContainer.style.visibility = "hidden";
+      tabsContainer.style.visibility = "hidden";
+    }
   }
 });
 
@@ -235,7 +236,7 @@ function getLocalTodos() {
   const localCompletedTodos = JSON.parse(
     localStorage.getItem("completedTodos")
   );
-
+  console.log(localUncompletedTodos, localCompletedTodos);
   if (localUncompletedTodos !== null)
     setLocalUncompletedTodos(localUncompletedTodos);
   if (localCompletedTodos !== null) setLocalCompletedTodos(localCompletedTodos);
