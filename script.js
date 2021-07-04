@@ -77,26 +77,30 @@ const addNewItem = () => {
   if (newTodoTextarea.value !== "") {
     //creates new list item and appends to the todo-list
     let newItem = document.createElement("li");
-    newItem.className = "task";
-
     let liLabel = document.createElement("label");
-    liLabel.className = "checkbox-container todo-item";
-
     let liLabelInput = document.createElement("input");
     liLabelInput.setAttribute("type", "checkbox");
-    liLabelInput.className = "checkbox";
-
     let liLabelSpan = document.createElement("span");
-    liLabelSpan.className = "checkmark";
+    let todoTitle = document.createElement("p");
+    let todoDeleteItem = document.createElement("span");
 
+    console.log(darkTheme);
+    if (darkTheme) {
+      newItem.className = "task";
+      liLabel.className = "checkbox-container todo-item";
+      liLabelSpan.className = "checkmark";
+      todoTitle.className = "todo-title";
+    } else {
+      newItem.className = "task li-light-theme";
+      liLabel.className = "checkbox-container todo-item light-theme";
+      liLabelSpan.className = "checkmark light-theme";
+      todoTitle.className = "todo-title light-theme";
+    }
+
+    liLabelInput.className = "checkbox";
+    todoDeleteItem.className = "delete-icon";
     liLabel.appendChild(liLabelInput);
     liLabel.appendChild(liLabelSpan);
-
-    let todoTitle = document.createElement("p");
-    todoTitle.className = "todo-title";
-
-    let todoDeleteItem = document.createElement("span");
-    todoDeleteItem.className = "delete-icon";
 
     newItem.appendChild(liLabel);
     todoTitle.innerHTML = newTodoTextarea.value;
@@ -236,7 +240,6 @@ function getLocalTodos() {
   const localCompletedTodos = JSON.parse(
     localStorage.getItem("completedTodos")
   );
-  console.log(localUncompletedTodos, localCompletedTodos);
   if (localUncompletedTodos !== null)
     setLocalUncompletedTodos(localUncompletedTodos);
   if (localCompletedTodos !== null) setLocalCompletedTodos(localCompletedTodos);
