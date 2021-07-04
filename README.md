@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://vishal-63.github.io/frontendmentor-todo-app/index.html)
+- Solution URL: [Frontend Mentor Solution Page](https://www.frontendmentor.io/solutions/localstorage-for-saving-the-todo-tasks-jQnd-okaO)
+- Live Site URL: [Live site](https://vishal-63.github.io/frontendmentor-todo-app/index.html)
 
 ## My process
 
