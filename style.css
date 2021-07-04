@@ -203,6 +203,8 @@ header {
   font-size: 1rem;
   margin-left: 2.5rem;
   width: 100%;
+  max-width: 540px;
+  overflow-wrap: break-word;
 }
 
 .delete-icon {
